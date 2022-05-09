@@ -16,7 +16,7 @@ with open("players.txt", "a") as txt_file:
     for letter in alphabet_list:
         LINK = f'https://www.basketball-reference.com/players/{letter}'
         response = requests.get(LINK)
-        response.raise_for_status() # in case of errors, this row returns more details
+        response.raise_for_status()     # in case of errors, this row returns more details
 
         soup = bs4.BeautifulSoup(response.text, 'html.parser')  # parsing the result of the request (for me to check the HTML tags)
 
@@ -33,9 +33,8 @@ with open("players.txt", "a") as txt_file:
                 rows += 1
 
 
-txt_file.close()
-
-end = datetime.datetime.now()
+txt_file.close()    # closing the file where the list of players was stored
+end = datetime.datetime.now()   # stopping the counting of time
 print("Scraping completed on: ")
-print(end.strftime("%Y-%m-%d %H:%M:%S, %f"))
-print("Scraping performed in: " + str(end - start) + " (" + str(rows) + " rows)")
+print(end.strftime("%Y-%m-%d %H:%M:%S, %f"))    # completing the stop warning on the screen
+print("Scraping performed in: " + str(end - start) + " (" + str(rows) + " rows)")   # showing how long the scraping took

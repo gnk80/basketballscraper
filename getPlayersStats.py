@@ -61,9 +61,10 @@ with open(read_from, 'r') as f:  # file with the players list
                     txt_file.write(dati)
                     rows += 1
 
+# closing both text files
 txt_file.close()
 f.close()
-end = datetime.datetime.now()
+end = datetime.datetime.now()   # stopping the counting of time
 print("Scraping completed on: ")
-print(end.strftime("%Y-%m-%d %H:%M:%S, %f"))
-print("Scraping performed in: " + str(end - start) + " (" + str(rows) + " rows)\n")
+print(end.strftime("%Y-%m-%d %H:%M:%S, %f"))    # completing the stop warning on the screen
+print("Scraping performed in: " + str(end - start) + " (" + str(rows) + " rows)\n")   # showing how long the scraping took
