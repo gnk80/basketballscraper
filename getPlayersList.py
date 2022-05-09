@@ -7,13 +7,13 @@ alphabet_string = string.ascii_lowercase
 alphabet_list = list(alphabet_string)
 start = datetime.datetime.now()
 
-print ("Scraping started on: ")
-print (start.strftime("%Y-%m-%d %H:%M:%S, %f"))
+print("Scraping started on: ")
+print(start.strftime("%Y-%m-%d %H:%M:%S, %f"))
 
 rows = 0
 
 with open("players.txt", "a") as txt_file:
-    for letter in alphabet_list[:1]:
+    for letter in alphabet_list:
         LINK = f'https://www.basketball-reference.com/players/{letter}'
         response = requests.get(LINK)
         response.raise_for_status() # in case of errors, this row returns more details
@@ -37,5 +37,5 @@ txt_file.close()
 
 end = datetime.datetime.now()
 print("Scraping completed on: ")
-print (end.strftime("%Y-%m-%d %H:%M:%S, %f"))
+print(end.strftime("%Y-%m-%d %H:%M:%S, %f"))
 print("Scraping performed in: " + str(end - start) + " (" + str(rows) + " rows)")

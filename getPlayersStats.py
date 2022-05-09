@@ -7,8 +7,8 @@ write_into = "./stats.csv"
 start = datetime.datetime.now()
 rows = 0
 
-print ("Scraping started on: ")
-print (start.strftime("%Y-%m-%d %H:%M:%S"))
+print("Scraping started on: ")
+print(start.strftime("%Y-%m-%d %H:%M:%S"))
 
 isFirstRow = True
 
@@ -66,5 +66,5 @@ txt_file.close()
 f.close()
 end = datetime.datetime.now()
 print("Scraping completed on: ")
-print (end.strftime("%Y-%m-%d %H:%M:%S, %f"))
+print(end.strftime("%Y-%m-%d %H:%M:%S, %f"))
 print("Scraping performed in: " + str(end - start) + " (" + str(rows) + " rows)")
