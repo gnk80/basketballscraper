@@ -37,8 +37,7 @@ with open(read_from, 'r') as f:  # file with the players list
 
                 cols = cols[:-2] + "\n"
 
-                # scraping the actual stats
-                tr = tbody.find_all('tr')
+                tr = tbody.find_all('tr')   # scraping the actual stats
                 for line in tr:
                     dati = player + ","
                     th = line.find('th')
@@ -67,4 +66,4 @@ f.close()
 end = datetime.datetime.now()
 print("Scraping completed on: ")
 print(end.strftime("%Y-%m-%d %H:%M:%S, %f"))
-print("Scraping performed in: " + str(end - start) + " (" + str(rows) + " rows)")
+print("Scraping performed in: " + str(end - start) + " (" + str(rows) + " rows)\n")

@@ -3,8 +3,8 @@ import bs4
 import requests
 import datetime
 
-alphabet_string = string.ascii_lowercase
-alphabet_list = list(alphabet_string)
+alphabet_string = string.ascii_lowercase    # all the letters
+alphabet_list = list(alphabet_string)    # making a list of all the letters
 start = datetime.datetime.now()
 
 print("Scraping started on: ")
