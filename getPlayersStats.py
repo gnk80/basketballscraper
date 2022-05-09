@@ -4,7 +4,7 @@ import datetime
 
 read_from = "./players.txt"
 write_into = "./stats.csv"
-start = datetime.datetime.now()
+start = datetime.datetime.now()     # keeping track of the starting time
 rows = 0
 
 print("Scraping started on: ")
@@ -12,8 +12,8 @@ print(start.strftime("%Y-%m-%d %H:%M:%S"))
 
 isFirstRow = True
 
-with open(read_from, 'r') as f:  # file with the players list
-    with open(write_into, "a") as txt_file: # file where the stats will be written into
+with open(read_from, 'r') as f:     # file with the players list
+    with open(write_into, "a") as txt_file:     # file where the stats will be written into
         lines = f.readlines()
         for line in lines:
             player = ""

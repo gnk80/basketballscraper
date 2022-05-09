@@ -5,7 +5,7 @@ import datetime
 
 alphabet_string = string.ascii_lowercase    # all the letters
 alphabet_list = list(alphabet_string)    # making a list of all the letters
-start = datetime.datetime.now()
+start = datetime.datetime.now()     # keeping track of the starting time
 
 print("Scraping started on: ")
 print(start.strftime("%Y-%m-%d %H:%M:%S, %f"))
